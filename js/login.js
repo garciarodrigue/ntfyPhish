@@ -12,9 +12,14 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'text/plain' },
       body: message
     });
-    warning("Contraseña incorrecta");
+    Swal.fire({
+	      title: '¡Atención!',
+	      text: 'Esto es una alerta personalizada',
+	      icon: 'warning',
+	      confirmButtonText: 'Entendido'
+    });
   } catch (err) {
-    warning("Error de red.");
+    alert("Error de red.");
     console.error(err);
   }
 });
