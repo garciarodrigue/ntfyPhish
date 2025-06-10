@@ -6,11 +6,12 @@ body {
   justify-content: center;
   align-items: center;
   background: #f3f4f6;
+  position: relative;
 }
 
 form {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   background: white;
   padding: 2rem;
   border-radius: 1rem;
@@ -18,6 +19,18 @@ form {
   width: 90%;
   max-width: 400px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.facebook-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.facebook-logo svg {
+  width: 48px;
+  height: 48px;
 }
 
 input, button {
@@ -52,8 +65,44 @@ button:hover {
   background: #2563eb;
 }
 
+.meta-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1877F2;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.meta-icon {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bubble-tail {
+  position: absolute;
+  bottom: -8px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 10px solid #1877F2;
+  transform: rotate(20deg);
+}
+
 @media (max-width: 500px) {
   form {
     padding: 1.5rem;
+  }
+  
+  .meta-bubble {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 12px;
   }
 }
