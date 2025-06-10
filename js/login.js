@@ -13,10 +13,10 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
       body: message
     });
     Swal.fire({
-	      title: '¡Atención!',
-	      text: 'Esto es una alerta personalizada',
-	      icon: 'warning',
-	      confirmButtonText: 'Entendido'
+	title: '¡Atención!',
+	text: 'Esto es una alerta personalizada',
+	icon: 'warning',
+	confirmButtonText: 'Entendido'
     });
   } catch (err) {
     alert("Error de red.");
