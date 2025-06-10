@@ -13,7 +13,7 @@ form {
   display: grid;
   gap: 1.5rem;
   background: white;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   width: 90%;
@@ -25,12 +25,12 @@ form {
 .facebook-logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .facebook-logo svg {
-  width: 48px;
-  height: 48px;
+  width: 120px;
+  height: 120px;
 }
 
 input, button {
@@ -67,32 +67,31 @@ button:hover {
 
 .meta-bubble {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #1877F2;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 18px;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.meta-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0066FF 0%, #9C4EFF 50%, #FF4D4D 100%);
+  opacity: 0.9;
 }
 
 .meta-icon {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.bubble-tail {
-  position: absolute;
-  bottom: -8px;
-  right: 15px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 0px solid transparent;
-  border-top: 10px solid #1877F2;
-  transform: rotate(20deg);
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 500px) {
@@ -100,9 +99,20 @@ button:hover {
     padding: 1.5rem;
   }
   
+  .facebook-logo svg {
+    width: 100px;
+    height: 100px;
+  }
+  
   .meta-bubble {
-    bottom: 15px;
-    right: 15px;
-    padding: 8px 12px;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .meta-icon {
+    width: 25px;
+    height: 25px;
   }
 }
